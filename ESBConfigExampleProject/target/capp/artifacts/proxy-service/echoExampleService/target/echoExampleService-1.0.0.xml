@@ -1,0 +1,14 @@
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+	name="echoExampleService" transports="https,http" statistics="disable"
+	trace="disable" startOnLoad="true">
+	<target>
+		<outSequence>
+			<send />
+		</outSequence>
+		<endpoint
+			name="endpoint_urn_uuid_1FF78996948B9A0B6E14565751214774-1218279313">
+			<wsdl service="echo" port="8282"
+              uri="http://188.93.79.92:8282/services/echo?wsdl2" />
+		</endpoint>
+	</target>
+</proxy>
